@@ -1,0 +1,15 @@
+<div id="job_group_delete">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="groupID" class="col-sm-offset-2 col-md-3">Group ID:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="groupID" ng-model="groupID"
+                       placeholder="Enter Group ID" required>
+            </div>
+        </div>
+        <div class="submit_button">
+            <button type="reset" class="col-sm-offset-5 btn btn-primary btn-md" ng-click="resetDeleteJobGroupForm()">Reset</button>
+            <button type="submit" class="btn btn-primary btn-md" ng-click="deleteJobGroupByGroupID(groupID)">Delete</button>
+        </div>
+    </form>
+</div>

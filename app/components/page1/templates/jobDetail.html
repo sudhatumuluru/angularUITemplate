@@ -1,0 +1,44 @@
+<div id="job_detail">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="jobID" class="col-sm-offset-2 col-md-3">Job ID:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="jobID" ng-model="jobID"
+                       placeholder="Enter Job ID" value="{{jobID}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="state" class="col-sm-offset-2 col-md-3">State:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="state" ng-model="state"
+                       placeholder="Enter Job State" value="{{state}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-offset-2 col-md-3">Site:</label>
+            <div class="col-md-4">
+                <select ng-init="selectedSite = sites[0]" ng-options="item as item.name for item in sites track by item.siteID" ng-model="selectedSite" required></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-offset-2 col-md-3">Release Version:</label>
+            <div class="col-md-4">
+                <select ng-init="selectedReleaseV = releases[0]" ng-options="item as item for item in releases track by item" ng-model="selectedReleaseV" required></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="time" class="col-sm-offset-2 col-md-3">Time:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="time" ng-model="time"
+                       placeholder="Enter Time" value="{{time}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="meta" class="col-sm-offset-2 col-md-3">Meta:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="meta" ng-model="meta"
+                       placeholder="Enter Meta" value="{{meta}}" required>
+            </div>
+        </div>
+    </form>
+</div>

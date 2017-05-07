@@ -1,0 +1,9 @@
+[
+  {"siteID": "001", "siteName": "Detroit"},
+  {"siteID": "002", "siteName": "Twin cities"},
+  {"siteID": "003", "siteName": "Houston"},
+  {"siteID": "004", "siteName": "San Jose"},
+  {"siteID": "005", "siteName": "San Francisco"},
+  {"siteID": "006", "siteName": "Kansas City"},
+  {"siteID": "007", "siteName": "Albuquerque"}
+]

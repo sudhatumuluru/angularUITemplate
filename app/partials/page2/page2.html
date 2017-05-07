@@ -1,0 +1,19 @@
+
+<div ng-init="tab='create'">
+    <div>
+        <ul class="sub-menu">
+            <li><a ng-click="tab='create'">Create</a></li>
+            <li><a ng-click="tab='search'">Search</a></li>
+            <li><a ng-click="tab='delete'">Delete</a></li>
+        </ul>
+    </div>
+    <div ng-show="tab=='create'">
+        <job-group-create> </job-group-create>
+    </div>
+    <div ng-show="tab=='search'">
+        <job-group-search> </job-group-search>
+    </div>
+    <div ng-show="tab=='delete'">
+        <job-group-delete> </job-group-delete>
+    </div>
+</div>

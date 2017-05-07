@@ -1,0 +1,59 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 0em;
+  padding: 0 0 0.5em;
+  font-size: 2em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.sub-menu {
+  list-style: none;
+  margin-bottom: 0em;
+  padding: 0 0 0.5em;
+  font-size: 1.5em;
+}
+
+.sub-menu > li {
+  display: inline;
+}
+
+.sub-menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.sub-menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.active {
+  background-color : green
+}
+md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+  background-color: #337ab7;
+}
