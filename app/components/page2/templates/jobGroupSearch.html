@@ -1,0 +1,41 @@
+<div id="job_search">
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="groupID" class="col-sm-offset-2 col-md-3">Group ID:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="groupID" ng-model="groupID"
+                       placeholder="Enter Group ID">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="groupName" class="col-sm-offset-2 col-md-3">Group Name:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="groupName" ng-model="groupName"
+                       placeholder="Enter Group Name">
+            </div>
+        </div>
+        <div class="submit_button">
+            <button type="reset" class="col-sm-offset-5 btn btn-primary btn-md" ng-click="resetSearchJobGroupForm()">Reset</button>
+            <button type="submit" class=" btn btn-primary btn-md" ng-click="searchJobGroup()">Search</button>
+        </div>
+    </form>
+
+    <div class="divider"></div>
+    <div id="job_group_search_result" ng-show="hasSearchResult === true">
+        <div tasty-table bind-resource="JobGroupResource">
+            <table class="table table-striped table-condensed">
+                <thead tasty-thead></thead>
+                <tbody>
+                <tr ng-repeat="row in rows">
+                    <td>{{ row.groupID }}</td>
+                    <td>{{ row.groupName }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <div tasty-pagination></div>
+        </div>
+
+    </div>
+
+</div>

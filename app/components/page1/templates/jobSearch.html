@@ -1,0 +1,64 @@
+<div id="job_search">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="jobID" class="col-sm-offset-2 col-md-3">Job ID:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="jobID" ng-model="jobID"
+                       placeholder="Enter Job ID" value="{{jobID}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="groupID" class="col-sm-offset-2 col-md-3">Job Group ID:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="groupID" ng-model="groupID"
+                       placeholder="Enter Job Group ID" value="{{groupID}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="minStart" class="col-sm-offset-2 col-md-3">Min Time:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="minStart" ng-model="minStart"
+                       placeholder="Enter Min Start" value="{{minStart}}" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="maxStart" class="col-sm-offset-2 col-md-3">Max Time:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="maxStart" ng-model="maxStart"
+                       placeholder="Enter Max Start" value="{{maxStart}}" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-offset-2 col-md-3">Site:</label>
+            <div class="col-md-4">
+                <select ng-options="item as item.name for item in sites track by item.siteID" ng-model="selected"></select>
+            </div>
+        </div>
+
+        <div class="submit_button">
+            <button type="reset" class="col-sm-offset-5 btn btn-primary btn-md" ng-click="resetSearchRecordingForm()">Reset</button>
+            <button type="submit" class=" btn btn-primary btn-md" ng-click="searchRecording()">Search</button>
+        </div>
+    </form>
+
+    <div class="divider" ></div>
+    <div id="job_search_result" ng-show="hasSearchResult === false">
+        <div tasty-table bind-resource="jobResource">
+            <table class="table table-striped table-condensed">
+                <thead tasty-thead></thead>
+                <tbody>
+                <tr ng-repeat="row in rows">
+                    <td>{{ row.jobID }}</td>
+                    <td>{{ row.jobGroupID }}</td>
+                    <td>{{ row.siteName }}</td>
+                    <td>{{ row.releaseVersion }}</td>
+                    <td>{{ row.time }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <div tasty-pagination></div>
+        </div>
+
+    </div>
+
+</div>

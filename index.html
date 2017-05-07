@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="relive" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="relive" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="relive" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="relive" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app/bower_components/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="app/bower_components/angularjs-datetime-picker/angularjs-datetime-picker.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="app/bower_components/ng-tags-input/ng-tags-input.min.css">
+  <link rel="stylesheet" href="app/app.css">
+</head>
+<body ng-cloak>
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="container" layout="column" ng-controller="AppCtrl" flex>
+    <md-toolbar>
+      <!--<h2> Release Server UI  </h2>-->
+      <div class="md-toolbar-tools">
+        <h2>
+          <strong>Project Name</strong>
+        </h2>
+        <span flex></span>
+        <span ng-show="isAuthorized">Logout</span><span ng-show="!isAuthorized">Please Login to Edit</span>
+        <md-button ng-hide="!isAuthorized" class="md-icon-button" aria-label="sign-out" ng-click="signout($event)">
+          <i class="fa fa-sign-out fa-2x"></i><md-tooltip>logout</md-tooltip>
+        </md-button>
+        <md-button ng-hide="isAuthorized" class="md-icon-button" aria-label="sign-in" ng-click="showAdvanced($event)">
+          <i class="fa fa-sign-in fa-2x"></i><md-tooltip>login</md-tooltip>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <!--<md-toolbar class="md-hue-2">-->
+      <!---->
+    <!--</md-toolbar>-->
+    <md-content class="md-padding" >
+      <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item md-nav-href="#/page1" name="page1">Page 1</md-nav-item>
+        <md-nav-item md-nav-href="#/page2" name="page2">Page 2</md-nav-item>
+      </md-nav-bar>
+      <div class="ext-content">
+        <div ng-view id="main"></div>
+        Project Version: <span app-version></span>
+      </div>
+    </md-content>
+  </div>
+
+  <!--Third Party Libs-->
+  <script src="app/bower_components/angular/angular.min.js"></script>
+  <script src="app/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="app/bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="app/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="app/bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="app/bower_components/angular-material/angular-material.min.js"></script>
+  <script src="app/bower_components/ng-tasty/ng-tasty-tpls.min.js"></script>
+  <script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="app/bower_components/angularjs-datetime-picker/angularjs-datetime-picker.js"></script>
+  <script src="app/bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+  <script src="app/bower_components/moment/min/moment.min.js"></script>
+  <script src="app/bower_components/moment-timezone/builds/moment-timezone-with-data.js"></script>
+  <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>-->
+  <!--Main JS-->
+  <script src="app/app.js"></script>
+  <script src="app/config.js"></script>
+  <script src="app/assets/api.js"></script>
+  <!--Partials-->
+  <script src="app/partials/page1/Page1Ctrl.js"></script>
+  <script src="app/partials/page2/Page2Ctrl.js"></script>
+  <script src="app/partials/auth/LoginCtrl.js"></script>
+  <!--Directives-->
+  <script src="app/components/dropdown/dropdown.js"></script>
+  <script src="app/components/page1/page1Directive.js"></script>
+  <script src="app/components/page2/page2Directive.js"></script>
+  <!--Services-->
+  <script src="app/services/page1Service.js"></script>
+  <script src="app/services/page2Service.js"></script>
+  <script src="app/components/version/version.js"></script>
+  <script src="app/components/version/version-directive.js"></script>
+  <script src="app/components/version/interpolate-filter.js"></script>
+</body>
+</html>

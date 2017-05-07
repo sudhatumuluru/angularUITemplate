@@ -1,0 +1,15 @@
+<div id="job_delete">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="jobID" class="col-sm-offset-2 col-md-3">Job ID:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="jobID" ng-model="jobID"
+                       placeholder="Enter Job ID" value="{{jobID}}" required>
+            </div>
+        </div>
+        <div class="submit_button">
+            <button type="reset" class="col-sm-offset-5 btn btn-primary btn-md" ng-click="resetDeleteJobForm()">Reset</button>
+            <button type="submit" class="btn btn-primary btn-md" ng-click="deleteJobByJobID(jobID)">Delete</button>
+        </div>
+    </form>
+</div>

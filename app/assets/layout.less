@@ -1,0 +1,85 @@
+.twoCol{
+  display: table;
+  .container;
+  height: 100%;
+  padding: 0px;
+
+  .menuCol{
+    display: table-cell;
+    vertical-align: top;
+    min-width: @col-menu-width;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .menuSettingCol{
+    .menuCol;
+    background-color: rgba(73, 64, 65, 0.44) !important;
+    min-width: @col-menu-setting-width;
+    &+.mainRightCol{
+      min-width: @col-main-setting-right-width;
+      background-color: #F8F8F7;
+    }
+  }
+
+
+  .mainCenterCol{
+    display: table-cell;
+    vertical-align: top;
+    min-width: @col-main-center-width;
+  }
+
+  .mainRightCol{
+    display: table-cell;
+    vertical-align: top;
+    min-width: @col-main-right-width;
+  }
+
+  .mianLeftCol{
+    display: table-cell;
+    vertical-align: top;
+    min-width: @col-left-width;
+  }
+
+  .rightCol{
+    display: table-cell;
+    vertical-align: top;
+    min-width: @col-right-width;
+
+    .layout-table{
+      height: 100%;
+    }
+  }
+
+  .gapCol{
+    display: table-cell;
+    min-width: @col-gap-width;
+  }
+  .gapMenuCol{
+    display: table-cell;
+    min-width: @col-menu-gap-width;
+  }
+
+  @media (max-width: @media-width-tablets) {
+    display: inherit;
+    .menuCol{
+      display: inherit;
+      overflow: auto;
+    }
+    .mainCenterCol{
+      display: inherit;
+      min-width: inherit;
+      margin-top: 20px;
+    }
+    .mianLeftCol{
+      display: inherit;
+      min-width: inherit;
+    }
+    .rightCol{
+      display: inherit;
+      margin-top: 20px;
+    }
+    .gapCol{
+      display: none;
+    }
+  }
+}

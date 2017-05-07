@@ -1,0 +1,24 @@
+<div id="login" ng-controller="LoginCtrl as vm">
+    <form class="form-horizontal">
+        <br>
+        <div class="form-group">
+            <label for="username" class="col-sm-offset-2 col-md-3">User Name:</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="username" ng-model="vm.username"
+                       placeholder="Enter User Name" value="{{vm.username}}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-offset-2 col-md-3">Password:</label>
+            <div class="col-md-4">
+                <input type="password" class="form-control" id="password" ng-model="vm.password"
+                       placeholder="Enter Password" value="{{vm.password}}" required>
+            </div>
+        </div>
+        <div class="submit_button">
+            <button type="reset" class="col-sm-offset-5 btn btn-primary btn-md" ng-click="vm.resetLoginForm()">Reset</button>
+            <button type="submit" class=" btn btn-primary btn-md" ng-click="vm.handleSubmit()">Submit</button>
+        </div>
+    </form>
+</div>
+
