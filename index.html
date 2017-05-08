@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Project</title>
+  <title>reLive</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -17,18 +17,67 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="app/bower_components/ng-tags-input/ng-tags-input.min.css">
   <link rel="stylesheet" href="app/app.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stlye.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body ng-cloak>
-  <!--[if lt IE 7]>
-  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+  <!--Navigation-->
+    
+    <div id="myNavBar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            
+                <a href="#" class="navbar-brand">reLive</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ol class="nav navbar-nav navbar-right">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#pricing">pricing</a></li>
+                    <li><a href="#team">team</a></li>
+                    <li><a href="#clients">clients </a></li>
+                    <li><a href="#contacts">contacts</a></li> 
+                    <a href="#LoginPage.html">Sign In</a>
+                    <a href="#Registration%20Page.html">Sign Up</a>
+                </ol>
+            </div>
+        </div>
+    </div>
+        
+    <!--End of Navigation-->
 
+        <div id="eader" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 wow lightSpeedIn">
+                <h1>A personalized Cloud Video solution</h1>
+                <p>
+                    Personal videos have become an essential part of life, especially if they are pictured by professionals on one’s special events and/or occasions. Most of the time, users intend to keep all such videos stored in physical devices and keep them safe. However, fact is that no physical device can last long enough. Some wear out while some may be lost when not in use.</p>
+                    <button class="btn btn-lg btn-primary">Subscribe Now</button>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                
+                </div>
+            </div>
+         </div>
+    </div>
+    
+    <!--End Header-->
+   
+ <!--
   <div class="container" layout="column" ng-controller="AppCtrl" flex>
     <md-toolbar>
-      <!--<h2> Release Server UI  </h2>-->
+      
       <div class="md-toolbar-tools">
         <h2>
-          <strong>Project Name</strong>
+          <strong>reLive</strong>
         </h2>
         <span flex></span>
         <span ng-show="isAuthorized">Logout</span><span ng-show="!isAuthorized">Please Login to Edit</span>
@@ -40,9 +89,7 @@
         </md-button>
       </div>
     </md-toolbar>
-    <!--<md-toolbar class="md-hue-2">-->
-      <!---->
-    <!--</md-toolbar>-->
+    
     <md-content class="md-padding" >
       <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
         <md-nav-item md-nav-href="#/page1" name="page1">Page 1</md-nav-item>
@@ -54,6 +101,7 @@
       </div>
     </md-content>
   </div>
+-->
 
   <!--Third Party Libs-->
   <script src="app/bower_components/angular/angular.min.js"></script>
